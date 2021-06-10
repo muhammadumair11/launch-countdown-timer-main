@@ -25,11 +25,11 @@ body {
 
 	font-family: $font;
 
-	img {
+	img.hills {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		z-index: -1;
+		z-index: -3;
 	}
 	h1 {
 		font-size: 1.4rem;
@@ -90,6 +90,68 @@ body {
 					}
 				}
 			}
+		}
+	}
+
+	.socials {
+		position: absolute;
+		bottom: 100px;
+
+		span {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+
+			margin: 0 10px;
+		}
+		.instagram {
+			background: url(../images/icon-instagram.svg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+
+			transition: all 500ms;
+			
+			&:hover {
+				background: url(../images/icon-ig-state-changed.svg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}		
+		.facebook {
+			background: url(../images/icon-facebook.svg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+
+			transition: all 500ms;
+			
+			&:hover {
+				background: url(../images/icon-fb-state-changed.svg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}		
+		.pinterest {
+			background: url(../images/icon-pinterest.svg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+
+			transition: all 500ms;
+			
+			&:hover {
+				background: url(../images/icon-pin-state-changed.svg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}		
+	}
+
+	.attribution {
+		position: absolute;
+		bottom: 10px;
+		color: white;
+
+		a {
+			color: white;
 		}
 	}
 }

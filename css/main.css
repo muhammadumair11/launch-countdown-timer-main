@@ -16,11 +16,11 @@ body {
   background: url(../images/bg-stars.svg), linear-gradient(0deg, #2f2439 0%, #1e1f29 70%);
   font-family: "Red Hat Text", Arial;
 }
-body img {
+body img.hills {
   position: absolute;
   bottom: 0;
   width: 100%;
-  z-index: -1;
+  z-index: -3;
 }
 body h1 {
   font-size: 1.4rem;
@@ -78,4 +78,55 @@ body .counter-container .time .timebox .line::after {
 body .counter-container .time .timebox .line::before {
   top: -5px;
   left: -12px;
+}
+body .socials {
+  position: absolute;
+  bottom: 100px;
+}
+body .socials span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+body .socials .instagram {
+  background: url(../images/icon-instagram.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 500ms;
+}
+body .socials .instagram:hover {
+  background: url(../images/icon-ig-state-changed.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .socials .facebook {
+  background: url(../images/icon-facebook.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 500ms;
+}
+body .socials .facebook:hover {
+  background: url(../images/icon-fb-state-changed.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .socials .pinterest {
+  background: url(../images/icon-pinterest.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 500ms;
+}
+body .socials .pinterest:hover {
+  background: url(../images/icon-pin-state-changed.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .attribution {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
+body .attribution a {
+  color: white;
 }
