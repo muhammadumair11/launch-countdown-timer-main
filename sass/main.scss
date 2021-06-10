@@ -1,0 +1,96 @@
+@import "colors";
+@import "fonts";
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: 0;
+}
+
+@mixin flex($x: center, $y: center, $flow: row) {
+	display: flex;
+	justify-content: $x;
+	align-items: $y;
+	flex-direction: $flow;
+}
+
+body {
+	@include flex(center, center, column);
+	height: 100vh;
+
+	background: url(../images/bg-stars.svg),
+		linear-gradient(0deg, rgba(47, 36, 57, 1) 0%, rgba(30, 31, 41, 1) 70%);
+
+	font-family: $font;
+
+	img {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 1.4rem;
+		color: $white;
+		font-weight: bold;
+		letter-spacing: 3px;
+    margin: 1.5rem 0;
+	}
+
+	.counter-container {
+		@include flex();
+
+		.time {
+			text-align: center;
+			color: white;
+
+			.timebox {
+				padding: 1.5rem;
+				margin: 1rem;
+
+        min-width: 100px;
+
+				border-radius: 8px;
+
+				position: relative;
+
+				@include flex();
+
+				background-color: $dark-desaturated-blue;
+				color: $soft-red;
+				font-weight: 700;
+				font-size: 4.5rem;
+				.line {
+					height: 1px;
+					background-color: rgba(0, 0, 0, 0.342);
+					box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.877);
+					width: 100%;
+					position: absolute;
+					z-index: 1;
+
+					&::after,
+					&::before {
+						content: "";
+						width: 20px;
+						height: 15px;
+						position: absolute;
+						z-index: 2;
+						border-radius: 100px;
+						background-color: $very-dark-black-blue;
+					}
+					&::after {
+						top: -5px;
+						right: -12px;
+					}
+					&::before {
+						top: -5px;
+						left: -12px;
+					}
+				}
+			}
+		}
+	}
+}
+
